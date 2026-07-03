@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <h1>📊 Reportes</h1>
+        <p class="text-muted">Estadísticas del sistema</p>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5>Top Estudiantes con más asistencias</h5>
+            </div>
+            <div class="card-body">
+                {% if top_estudiantes %}
+                <ul class="list-group">
+                    {% for estudiante in top_estudiantes %}
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        {{ estudiante.nombre }}
+                        <span class="badge bg-primary rounded-pill">{{ estudiante.total }}</span>
+                    </li>
+                    {% endfor %}
+                </ul>
+                {% else %}
+                <p class="text-muted">No hay datos aún</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5>Total de Asistencias</h5>
+            </div>
+            <div class="card-body text-center">
+                <p class="display-1">{{ total_asistencias }}</p>
+                <p class="text-muted">Registros totales</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="display-4">📊 Dashboard</h1>
+        <p class="lead">Resumen del sistema de asistencias</p>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-4">
+        <div class="card text-white bg-primary mb-3">
+            <div class="card-body">
+                <h5 class="card-title">👨‍🎓 Estudiantes</h5>
+                <p class="card-text display-6">{{ total_estudiantes }}</p>
+                <small>Registrados en el sistema</small>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-white bg-success mb-3">
+            <div class="card-body">
+                <h5 class="card-title">✅ Asistencias Hoy</h5>
+                <p class="card-text display-6">{{ asistencias_hoy }}</p>
+                <small>Registradas hoy</small>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-white bg-info mb-3">
+            <div class="card-body">
+                <h5 class="card-title">📋 Total Asistencias</h5>
+                <p class="card-text display-6">{{ total_asistencias }}</p>
+                <small>Registros totales</small>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

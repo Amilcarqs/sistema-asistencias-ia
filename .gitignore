@@ -1,0 +1,25 @@
+# Entorno virtual
+venv/
+env/
+__pycache__/
+*.pyc
+
+# Archivos de datos
+datos/asistencias.db
+datos/temporal/
+datos/estudiantes/
+*.csv
+
+# Archivos de configuración local
+.vscode/
+.idea/
+*.log
+
+# Sistema operativo
+Thumbs.db
+.DS_Store
+
+# otros
+proyecto.txt
+pendientes.md
+proyecto.zip
